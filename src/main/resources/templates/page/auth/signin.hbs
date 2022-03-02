@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+{{#> layout/header}}
+    {{#partial "title"}}
+        <title>Spring boot Sign In</title>
+    {{/partial}}
+    {{#partial "stylesheet"}}
+        <link rel="stylesheet" href="/css/app/sign.css">
+    {{/partial}}
+{{/layout/header}}
+<body>
+{{> layout/layout}}
+<div class="text-center">
+    <main class="form-signin">
+        <form action="/signin" method="post">
+            <img class="mb-4" src="/assets/img/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">My Spring</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" name="username" id="username" placeholder="ID">
+                <label for="floatingInput">ID</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Sign In">로그인</button>
+            <div class="w-100 mb-3">
+                <hr />
+                <span class="text-muted">아직 회원이 아니십니까?</span>
+            </div>
+            <a class="w-100 btn btn-lg btn-info btn-sm" href="/signup">회원가입</a>
+        </form>
+    </main>
+</div>
+
+{{> layout/footer}}
+<script src="/js/app/main.js"></script>
+</body>
+</html>

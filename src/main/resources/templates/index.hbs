@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+{{#> layout/header}}
+    {{#partial "title"}}
+        <title>Spring boot Main</title>
+    {{/partial}}
+{{/layout/header}}
+<body>
+{{> layout/layout}}
+
+<div class="container">
+    {{title}}
+    <br>
+    {{{title}}}
+    <br>
+    {{json tempMember.name escapeHTML=true}}
+
+    {{#if members}}
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>ID</th>
+                <th>Password</th>
+                <th>E-mail</th>
+                <th>Number</th>
+                <th>생성일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            {{#each members}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{password}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phone_number}}</td>
+                    <td>{{createTime}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+</div>
+
+{{> layout/footer}}
+<script src="/js/app/main.js"></script>
+</body>
+</html>

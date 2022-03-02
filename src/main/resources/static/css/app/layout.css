@@ -1,0 +1,11 @@
+html{
+    height: 100%!important;
+}
+body{
+    display: flex!important;
+    flex-direction: column!important;
+    height: 100%!important;
+}
+header{
+    min-height: 3.5rem;
+}
